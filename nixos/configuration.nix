@@ -403,6 +403,10 @@ programs.bash.shellAliases = {
 
   channel = "sudo nix-channel --list";
 
+  #github bacup
+
+  backup = "journalctl -u daily-config-backup.service";
+
 };
 
 
@@ -452,41 +456,6 @@ xdg.portal = {
 
 
  
-/**
-
-systemd.services.daily-config-backup = {
-    description = "Backup NixOS and Niri configurations";
-    after = [ "local-fs.target" ];
-    wantedBy = [ "multi-user.target" ];
-    
-    path = [ pkgs.gzip ]; 
-
-    serviceConfig = {
-      Type = "oneshot";
-      User = "root";
-    };
-
-    script = ''
-      BACKUP_DIR="/var/backup/configs"
-      DATE=$(date +%Y-%m-%d)
-      FILENAME="config-backup-$DATE.tar.gz"
-
-      echo "Starting backup..."
-      mkdir -p "$BACKUP_DIR"
-
-      # -P allows absolute paths so tar doesn't complain or drop files
-      ${pkgs.gnutar}/bin/tar -czPf "$BACKUP_DIR/$FILENAME" \
-        /etc/nixos \
-        /home/pratham/.config/niri/config.kdl
-
-      ${pkgs.findutils}/bin/find "$BACKUP_DIR" -type f -mtime +30 -name "config-backup-*.tar.gz" -delete
-
-      echo "Backup completed successfully: $BACKUP_DIR/$FILENAME"
-    '';
-  };
-
-**/
-
 
 
 systemd.services.daily-config-backup = {
