@@ -405,7 +405,7 @@ programs.bash.shellAliases = {
 
   #github bacup
 
-  backup = "journalctl -u daily-config-backup.service";
+  backup = "sudo systemctl start daily-config-backup.service";
 
 };
 
