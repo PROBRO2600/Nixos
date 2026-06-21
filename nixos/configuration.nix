@@ -1,6 +1,7 @@
-# Edit thy configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# Inscribe thy configuration codex to decree what provisions shall be established 
+# across thy realm. Counsel may be sought upon the configuration.nix(5) parchment, 
+# and within the grand NixOS tome (which thou mayst summon by the decree ‘nixos-help’).
+
 
 { config, pkgs, ... }:
 
