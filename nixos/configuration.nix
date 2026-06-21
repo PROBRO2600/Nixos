@@ -1,6 +1,6 @@
-# eEedit this configuration file to define what should be installed on
+# Edit thy configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
-# aand in the NixOS manual (accessible by running ‘nixos-help’).
+# and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
 
@@ -475,67 +475,6 @@ xdg.portal = {
 
  
 
-/**
-systemd.services.daily-config-backup = {
-    description = "Backup NixOS and Niri configurations to GitHub";
-    after = [ "network-online.target" "local-fs.target" ];
-    wants = [ "network-online.target" ]; # Ensures internet is up before running
-    wantedBy = [ "multi-user.target" ];
-    
-    # Add git, openssh (for ssh-agent/keys), and coreutils to the service PATH
-    path = [ pkgs.git pkgs.openssh pkgs.coreutils ]; 
-
-    serviceConfig = {
-      Type = "oneshot";
-      User = "root";
-    };
-
-    script = ''
-      # Configurations
-      REPO_DIR="/var/backup/git-configs"
-      GITHUB_URL="git@github.com:PROBRO2600/Nixos.git" # <-- CHANGE THIS
-      
-      echo "Starting config backup to GitHub..."
-
-      # 1. Ensure the directory structure exists
-      mkdir -p "$REPO_DIR/nixos"
-      mkdir -p "$REPO_DIR/niri"
-
-      # 2. Copy the latest configs into the repo directory
-      cp -r /etc/nixos/* "$REPO_DIR/nixos/"
-      cp /home/pratham/.config/niri/config.kdl "$REPO_DIR/niri/"
-
-      # 3. Move into the repo directory and initialize if needed
-      cd "$REPO_DIR"
-      if [ ! -d ".git" ]; then
-        echo "Initializing git repository..."
-        git init
-        git remote add origin "$GITHUB_URL"
-        git branch -M main
-      fi
-
-      # 4. Set local git user identity for this repo so it runs seamlessly as root
-      git config user.name "NixOS Backup Daemon"
-      git config user.email "backup-daemon@localhost"
-
-      # 5. Disable strict SSH host checking for this automated job 
-      # (Prevents git push from hanging waiting for a 'yes/no' prompt)
-      export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=accept-new"
-
-      # 6. Commit and Push
-      git add .
-      # Only commit if changes exist, preventing dummy commits
-      if ! git diff-index --quiet HEAD --; then
-        git commit -m "Automated backup: $(date '+%Y-%m-%d %H:%M:%S')"
-        echo "Pushing changes to GitHub..."
-        git push -u origin main
-      else
-        echo "No changes detected. Skipping push."
-      fi
-    '';
-  };
-
-**/
 
 
 
