@@ -1,4 +1,4 @@
-# Edit this configuration file to define what should be installed on
+# eEedit this configuration file to define what should be installed on
 # your system.  Help is available in the configuration.nix(5) man page
 # aand in the NixOS manual (accessible by running ‘nixos-help’).
 
@@ -28,6 +28,23 @@
   networking.networkmanager.enable = true;
 
 
+  #DISABLE WIFI POWER SAVING
+  networking.networkmanager.wifi.powersave = false;
+   
+  #ADD INDIAN MIRROR
+/**
+  nix.settings = {
+  substituters = [
+    "https://mirror.sjtu.edu.cn/nix-channels/store" # Excellent Asian mirror
+    "https://cache.nixos.org/"                      # Global fallback
+  ];
+  # This ensures NixOS trusts the keys from the main cache
+  trusted-public-keys = [
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+  ];
+};
+
+**/
   # fast uh download speed
 
     nix.settings = {
@@ -290,7 +307,7 @@ services.displayManager.autoLogin = {
     bemoji
     wtype
     
-    gparted
+    kdePackages.partitionmanager
 
 
 
@@ -407,6 +424,7 @@ programs.bash.shellAliases = {
 
   backup = "sudo systemctl start daily-config-backup.service";
 
+  backuplog = "systemctl status daily-config-backup.service";
 };
 
 
@@ -457,7 +475,7 @@ xdg.portal = {
 
  
 
-
+/**
 systemd.services.daily-config-backup = {
     description = "Backup NixOS and Niri configurations to GitHub";
     after = [ "network-online.target" "local-fs.target" ];
@@ -517,12 +535,67 @@ systemd.services.daily-config-backup = {
     '';
   };
 
+**/
 
 
 
+systemd.services.daily-config-backup = {
+    description = "Backup NixOS and Niri configurations to GitHub";
+    after = [ "network-online.target" "local-fs.target" ];
+    wants = [ "network-online.target" ];
+    wantedBy = [ "multi-user.target" ];
+    
+    path = [ pkgs.git pkgs.openssh pkgs.coreutils ]; 
 
+    serviceConfig = {
+      Type = "oneshot";
+      User = "root";
+    };
 
+    script = ''
+      REPO_DIR="/var/backup/git-configs"
+      GITHUB_URL="git@github.com:PROBRO2600/Nixos.git"
+      
+      echo "Starting config backup to GitHub..."
+      export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=accept-new"
 
+      # 1. If it's a completely fresh run, clone the repo instead of initializing blank
+      if [ ! -d "$REPO_DIR/.git" ]; then
+        echo "Workspace empty or broken. Cloning fresh repository from GitHub..."
+        rm -rf "$REPO_DIR" # Clean up any partial un-tracked folders
+        git clone "$GITHUB_URL" "$REPO_DIR"
+      fi
+
+      cd "$REPO_DIR"
+      
+      # Configure user identity for this workspace
+      git config user.name "NixOS Backup Daemon"
+      git config user.email "backup-daemon@localhost"
+
+      # Create folders inside the repo if they don't exist yet
+      mkdir -p "nixos"
+      mkdir -p "niri"
+
+      # 2. Pull down any remote updates before making modifications
+      echo "Syncing latest history from GitHub..."
+      git pull origin main --no-rebase -X theirs --no-edit || true
+
+      # 3. Copy your live system files into the repo folder
+      cp -r /etc/nixos/* "nixos/"
+      cp /home/pratham/.config/niri/config.kdl "niri/"
+
+      # 4. Stage, commit, and push
+      git add .
+      
+      if ! git diff-index --quiet HEAD --; then
+        git commit -m "Automated backup: $(date '+%Y-%m-%d %H:%M:%S')"
+        echo "Pushing changes to GitHub..."
+        git push origin main
+      else
+        echo "No changes detected. Skipping push."
+      fi
+    '';
+  };
 
 
 
