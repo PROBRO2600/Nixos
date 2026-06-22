@@ -1,7 +1,7 @@
-// This config iss in the KDL format: https://kdl.dev
+// This config iss in the KDL format: https://kdl.dev 55555
 // "/-" comments out the following node.
 // Check the wiki for a full description of the configuration:
-// https://niri-wm.github.io/niri/Configuration:-Introduction
+// https://niri-wm.github.io/niri/Configuration:-Introd
 
 cursor {
     // The exact name of the cursor theme
@@ -162,7 +162,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    // default-column-width {proportion 0.5;}
+     default-column-width {proportion 0.5;}
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -262,7 +262,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-        // on
+       // on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -278,7 +278,7 @@ layout {
         // window. These will also remove client-side shadows if the window
         // draws any.
         //
-        // draw-behind-window true
+        //draw-behind-window true
 
         // You can change how shadows look. The values below are in logical
         // pixels and match the CSS box-shadow properties.
@@ -320,7 +320,7 @@ layout {
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-    // skip-at-startup
+     skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -593,15 +593,15 @@ binds {
     //
     // For example, with 2 workspaces + 1 empty, indices 3, 4, 5 and so on
     // will all refer to the 3rd workspace.
-    Ctrl+Shift+Right { focus-workspace 1; }
-    Mod+C { focus-workspace 2; }
-    Mod+3 { focus-workspace 3; }
-    Mod+4 { focus-workspace 4; }
-    Mod+5 { focus-workspace 5; }
-    Mod+6 { focus-workspace 6; }
-    Mod+7 { focus-workspace 7; }
-    Mod+8 { focus-workspace 8; }
-    Mod+9 { focus-workspace 9; }
+    Mod+shift+1 { focus-workspace 1; }
+    Mod+shift+2 { focus-workspace 2; }
+    Mod+shift+3 { focus-workspace 3; }
+    Mod+shift+4 { focus-workspace 4; }
+    Mod+shift+5 { focus-workspace 5; }
+    Mod+shift+6 { focus-workspace 6; }
+    Mod+shift+7 { focus-workspace 7; }
+    Mod+shift+8 { focus-workspace 8; }
+    Mod+shift+9 { focus-workspace 9; }
     Mod+Ctrl+1 { move-column-to-workspace 1; }
     Mod+Ctrl+2 { move-column-to-workspace 2; }
     Mod+Ctrl+3 { move-column-to-workspace 3; }
@@ -652,7 +652,7 @@ binds {
     // Makes the column "fill the rest of the space".
     // Mod+Down { expand-column-to-available-width; }
 
-    Mod+0 { center-column; }
+   // Mod+0 { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
