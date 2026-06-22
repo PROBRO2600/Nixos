@@ -308,8 +308,7 @@ services.displayManager.autoLogin = {
     bemoji
     wtype
     
-    kdePackages.partitionmanager
-
+    mission-center
 
 
 
