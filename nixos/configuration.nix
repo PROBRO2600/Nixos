@@ -428,7 +428,7 @@ programs.bash.shellAliases = {
 
   #sleep
 
-  suspend = "systemctl suspend";
+  sleep = "systemctl suspend";
 
 };
 
