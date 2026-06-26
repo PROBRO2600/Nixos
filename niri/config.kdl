@@ -15,7 +15,7 @@ cursor {
 prefer-no-csd
 
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
-spawn-at-startup "swaybg" "-i" "/home/pratham/Downloads/toy-story-5-i-knew-3840x2160-26594.jpg" "-m" "fill"
+spawn-at-startup "swaybg" "-i" "/home/pratham/w.jpg" "-m" "fill"
 
 
 // Input device configuration.

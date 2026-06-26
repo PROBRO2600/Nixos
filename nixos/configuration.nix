@@ -309,7 +309,7 @@ services.displayManager.autoLogin = {
     wtype
     onlyoffice-desktopeditors
     mission-center
-
+    kdePackages.breeze
 
 
 
