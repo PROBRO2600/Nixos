@@ -425,6 +425,11 @@ programs.bash.shellAliases = {
   backup = "sudo systemctl start daily-config-backup.service";
 
   backuplog = "systemctl status daily-config-backup.service";
+
+  #sleep
+
+  suspend = "systemctl suspend";
+
 };
 
 
