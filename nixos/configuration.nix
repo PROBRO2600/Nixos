@@ -307,7 +307,7 @@ services.displayManager.autoLogin = {
     pavucontrol
     bemoji
     wtype
-   # onlyoffice-desktopeditors
+    onlyoffice-desktopeditors
     mission-center
 
 
