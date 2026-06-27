@@ -307,6 +307,7 @@ services.displayManager.autoLogin = {
     pavucontrol
     bemoji
     wtype
+    wl-clipboard
     onlyoffice-desktopeditors
     mission-center
     kdePackages.breeze

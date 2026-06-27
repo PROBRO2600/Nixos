@@ -3,6 +3,8 @@
 // Check the wiki for a full description of the configuration:
 // https://niri-wm.github.io/niri/Configuration:-Introd
 
+			
+
 cursor {
     // The exact name of the cursor theme
     xcursor-theme "Bibata-Original-Classic"
