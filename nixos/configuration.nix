@@ -429,6 +429,10 @@ programs.bash.shellAliases = {
 
   sleep = "systemctl suspend";
 
+  #Alacirtty config
+
+  alaconf = "nano ~/.config/alacritty.toml";
+
 };
 
 
