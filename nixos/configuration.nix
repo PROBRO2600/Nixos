@@ -311,10 +311,8 @@ services.displayManager.autoLogin = {
     onlyoffice-desktopeditors
     mission-center
     kdePackages.breeze
-
-
-
-
+    mousepad
+    appimage-run
 
 
 
@@ -326,7 +324,7 @@ services.displayManager.autoLogin = {
 
 
 
-  # Allow system to locate cursor themes in /run/current-system/sw/share/icons
+  #  Allow system to locate cursor themes in /run/current-system/sw/share/icons
   environment.sessionVariables = {
     XCURSOR_PATH = [
       "$HOME/.icons"
@@ -392,11 +390,11 @@ programs.bash.shellAliases = {
   aria = "aria2c -x 16 -s 64 -j 64 -k 1M";
   
   #REBUILD
-  rebuild = "sudo nixos-rebuild switch --log-format bar-with-logs";
+  jadhav = "sudo nixos-rebuild switch --log-format bar-with-logs";
 
   #CONFIG
 
-  config = "sudo nano /etc/nixos/configuration.nix";
+  sharanya = "sudo nano /etc/nixos/configuration.nix";
   
   #WARP CLI
 
