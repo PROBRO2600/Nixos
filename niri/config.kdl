@@ -18,7 +18,7 @@ prefer-no-csd
 
 spawn-at-startup "dbus-update-activation-environment" "--systemd" "DISPLAY" "WAYLAND_DISPLAY" "XDG_CURRENT_DESKTOP"
 spawn-at-startup "swaybg" "-i" "/home/pratham/w.jpg" "-m" "fill"
-
+spawn-at-startup "waydroid"
 
 // Input device configuration.
 // Find the full list of options on the wiki:
