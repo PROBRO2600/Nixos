@@ -390,11 +390,12 @@ programs.bash.shellAliases = {
   aria = "aria2c -x 16 -s 64 -j 64 -k 1M";
   
   #REBUILD
-  jadhav = "sudo nixos-rebuild switch --log-format bar-with-logs";
+   
+  rebuild = "sudo nixos-rebuild switch --log-format bar-with-logs";
 
   #CONFIG
 
-  sharanya = "sudo nano /etc/nixos/configuration.nix";
+  config = "sudo nano /etc/nixos/configuration.nix";
   
   #WARP CLI
 
