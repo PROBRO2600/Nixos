@@ -313,6 +313,32 @@ services.displayManager.autoLogin = {
     kdePackages.breeze
     mousepad
     appimage-run
+    kdePackages.partitionmanager
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
