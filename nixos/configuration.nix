@@ -459,6 +459,10 @@ programs.bash.shellAliases = {
 
   alaconf = "nano ~/.config/alacritty.toml";
 
+  #fastfetch
+
+  f = "fastfetch";
+
 };
 
 
