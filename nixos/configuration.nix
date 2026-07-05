@@ -314,7 +314,7 @@ services.displayManager.autoLogin = {
     mousepad
     appimage-run
     spotify
-
+    woeusb-ng
 
 
 
