@@ -443,6 +443,8 @@ binds {
     Mod+Shift+S { spawn "eww" "open" "--toggle" "sidebox"; }
     
     Mod+D {spawn "niri";}  
+    
+    Mod+R {spawn "mousepad";}
    
 
     // emoji picker

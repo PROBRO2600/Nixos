@@ -313,7 +313,7 @@ services.displayManager.autoLogin = {
     kdePackages.breeze
     mousepad
     appimage-run
-
+    spotify
 
 
 
