@@ -344,6 +344,15 @@ services.displayManager.autoLogin = {
 
 
 
+  fonts.packages = with pkgs; [
+  noto-fonts
+  noto-fonts-color-emoji
+];
+
+
+
+
+
 
 #fuzzel config
 
