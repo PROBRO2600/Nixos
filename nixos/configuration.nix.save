@@ -275,13 +275,14 @@ services.displayManager.autoLogin = {
    #gimp
     fortune
     discord
+    element-desktop
     fastfetch
     aria2
     libva-vdpau-driver
     libvdpau-va-gl
     intel-media-driver
     intel-vaapi-driver
-   #google-chrome
+   # google-chrome
     firefox
     wget
     prismlauncher
@@ -289,6 +290,10 @@ services.displayManager.autoLogin = {
     bluej
     cloudflare-warp
     waydroid
+    #for waydoid
+    iptables
+    #byeeee
+    #for niri
     xwayland-satellite
     alacritty
     fuzzel

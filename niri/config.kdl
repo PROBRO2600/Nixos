@@ -3,6 +3,14 @@
 // Check the wiki for a full description of the configuration:
 // https://niri-wm.github.io/niri/Configuration:-Introd
 
+
+ gestures {
+    hot-corners {
+        off
+    }
+}
+
+
 			
 
 cursor {
@@ -26,7 +34,7 @@ spawn-at-startup "swaybg" "-i" "/home/pratham/w.jpg" "-m" "fill"
 input {
 
 
-focus-follows-mouse 
+//focus-follows-mouse 
 
     keyboard {
         xkb {
@@ -262,6 +270,12 @@ layout {
         // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
+    
+
+   
+
+   
+
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
@@ -444,11 +458,13 @@ binds {
     
     Mod+D {spawn "niri";}  
     
-    Mod+R {spawn "mousepad";}
+    Mod+N {spawn "mousepad";}
    
 
     // emoji picker
     Mod+Period { spawn-sh "BEMOJI_PICKER=fuzzel LC_ALL=en_IN.UTF-8 bemoji -c"; }
+    
+   
 
 
     // Mod-Shift-/, which is usually the same as Mod-?,
