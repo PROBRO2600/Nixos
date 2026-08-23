@@ -439,6 +439,10 @@ virtualisation.waydroid.enable = true;
 programs.bash.shellAliases = {
 
   update = "sudo nix-channel --update && sudo nixos-rebuild switch --upgrade";
+  
+  #reset cliphlist
+
+  clear = "cliphlist wipe";
 
 
   # Clean up the "Ghost" generations
