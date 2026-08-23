@@ -365,7 +365,6 @@ environment.etc."xdg/fuzzel/fuzzel.ini".text = ''
   match=0953aeff
   selection=163047cc
   selection-text=f0f9ffff
-  border=0953aecc
 '';
 
 
