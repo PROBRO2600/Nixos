@@ -305,6 +305,7 @@ services.displayManager.autoLogin = {
     bemoji
     wtype
     wl-clipboard
+    cliphist
     onlyoffice-desktopeditors
     mission-center
     mousepad
