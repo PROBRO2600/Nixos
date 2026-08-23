@@ -283,6 +283,7 @@ services.displayManager.autoLogin = {
     intel-vaapi-driver
    #google-chrome
     firefox
+    git
     wget
     prismlauncher
     jetbrains.idea
