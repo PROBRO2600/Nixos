@@ -491,7 +491,7 @@ binds {
    
 
     // emoji picker
-    Mod+Period { spawn-sh "BEMOJI_PICKER=fuzzel LC_ALL=en_IN.UTF-8 bemoji -c"; }
+    Mod+Period { spawn "bemoji" "-t"; }
     
    
 
