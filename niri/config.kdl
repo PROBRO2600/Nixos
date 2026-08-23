@@ -11,6 +11,35 @@
 }
 
 
+ // Blur tuning
+blur {
+    passes 1
+    offset 1
+    noise 0
+    saturation 0
+}
+
+// Blur specifically behind Fuzzel
+layer-rule {
+    match namespace="^launcher$"
+
+    background-effect {
+        blur true
+        xray false
+    }
+
+    geometry-corner-radius 10
+
+    shadow {
+        on
+        softness 20
+        spread 2
+        offset x=0 y=4
+        color "#00000080"
+    }
+}
+
+
 			
 
 cursor {

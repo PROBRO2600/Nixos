@@ -550,7 +550,7 @@ systemd.services.daily-config-backup = {
       mkdir -p "niri"
 
       # 2. Pull down any remote updates before making modifications
-      echo "Syncing latest history from GitHub..."
+      echo Syncing latest history from GitHub...
       git pull origin main --no-rebase -X theirs --no-edit || true
 
       # 3. Copy your live system files into the repo folder
