@@ -160,6 +160,7 @@ programs.niri.enable = true;
 environment.sessionVariables = {
   GTK_USE_PORTAL = "1";
   GDK_BACKEND = "wayland";
+  BEMOJI_PICKER_CMD = "fuzzel -d";
 };
 
 
