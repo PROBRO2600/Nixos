@@ -442,7 +442,7 @@ programs.bash.shellAliases = {
   
   #reset cliphlist
 
-  wipe = "cliphlist wipe";
+  wipe = "cliphist wipe";
 
 
   # Clean up the "Ghost" generations
