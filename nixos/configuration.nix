@@ -358,7 +358,7 @@ services.displayManager.autoLogin = {
 
 environment.etc."xdg/fuzzel/fuzzel.ini".text = ''
   [main]
-  font=Sans:size=12
+  font=Sans:size=12,Noto Color Emoji:size=12
   width=40
   lines=10
   horizontal-pad=20
