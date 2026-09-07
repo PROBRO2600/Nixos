@@ -425,25 +425,16 @@ virtualisation.waydroid.enable = true;
 
 
 
-
-
-
-
-
-
-
-
-
-
 #PICKUP LINES
 
 
   # Add this to your configuration.nix
 programs.bash.shellAliases = {
 
-  #download spotify songs with artwork
+
+  spot = "f() { spotdl download \"$@\" --threads 10 --lyrics genius musixmatch --generate-lrc --format mp3 --bitrate 320k --preload --fetch-albums --print-errors --archive spotdl.archive; }; f";
+
   
-  spot = "spotdl download --threads 10 --lyrics genius musixmatch --generate-lrc --format mp3 --bitrate 320k --preload --fetch-albums --print-errors --archive spotdl.archive";
 
   update = "sudo nix-channel --update && sudo nixos-rebuild switch --upgrade";
   
