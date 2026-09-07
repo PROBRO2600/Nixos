@@ -344,7 +344,6 @@ services.displayManager.autoLogin = {
 
 
 
-
   ];
 
 
@@ -441,6 +440,10 @@ virtualisation.waydroid.enable = true;
 
   # Add this to your configuration.nix
 programs.bash.shellAliases = {
+
+  #download spotify songs with artwork
+  
+  spot = ''spotdl download --threads 10 --lyrics genius musixmatch --generate-lrc --format mp3 --bitrate 320k --preload --fetch-albums --print-errors --archive spotdl.archive'';
 
   update = "sudo nix-channel --update && sudo nixos-rebuild switch --upgrade";
   
