@@ -314,6 +314,8 @@ services.displayManager.autoLogin = {
     spotdl
     woeusb-ng
     cage
+    proton-pass
+    protonmail-desktop
 
 
 
