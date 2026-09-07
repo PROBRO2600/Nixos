@@ -272,7 +272,7 @@ services.displayManager.autoLogin = {
 
 
     vlc
-   #gimp
+    #gimp
     fortune
     discord
     fastfetch
@@ -281,13 +281,12 @@ services.displayManager.autoLogin = {
     libvdpau-va-gl
     intel-media-driver
     intel-vaapi-driver
-   #google-chrome
+    #google-chrome
     firefox
     git
     playerctl
     wget
     prismlauncher
-    jetbrains.idea
     bluej
     cloudflare-warp
     waydroid
@@ -312,7 +311,9 @@ services.displayManager.autoLogin = {
     mousepad
     appimage-run
     spotify
+    spotdl
     woeusb-ng
+    cage
 
 
 
