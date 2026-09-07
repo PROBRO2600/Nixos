@@ -317,7 +317,7 @@ services.displayManager.autoLogin = {
     proton-pass
     protonmail-desktop
     kid3
-
+    picard
 
 
 
