@@ -432,7 +432,7 @@ virtualisation.waydroid.enable = true;
 programs.bash.shellAliases = {
 
 
-  channe = "sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos && sudo nix-channel --update sudo nixos-rebuild switch --upgrade";
+  channelUnstable = "sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos && sudo nix-channel --update sudo nixos-rebuild switch --upgrade";
   
 
   update = "sudo nix-channel --update && sudo nixos-rebuild switch --upgrade";
@@ -477,7 +477,7 @@ programs.bash.shellAliases = {
 
   #CHANNEL?
 
-  channel = "sudo nix-channel --list";
+  channelList = "sudo nix-channel --list";
 
   #github bacup
 
