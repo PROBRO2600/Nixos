@@ -432,8 +432,7 @@ virtualisation.waydroid.enable = true;
 programs.bash.shellAliases = {
 
 
-  spot = "f() { spotdl download \"$@\" --threads 10 --lyrics genius musixmatch --generate-lrc --format mp3 --bitrate 320k --preload --fetch-albums --print-errors --archive spotdl.archive; }; f";
-
+  channe = "sudo nix-channel --add https://nixos.org/channels/nixos-unstable nixos && sudo nix-channel --update sudo nixos-rebuild switch --upgrade";
   
 
   update = "sudo nix-channel --update && sudo nixos-rebuild switch --upgrade";
