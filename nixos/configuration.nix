@@ -284,6 +284,7 @@ services.displayManager.autoLogin = {
    #google-chrome
     firefox
     git
+    playerctl
     wget
     prismlauncher
     jetbrains.idea

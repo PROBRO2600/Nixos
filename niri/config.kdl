@@ -58,12 +58,14 @@ layer-rule {
         xray false
     }
 
+
+
     geometry-corner-radius 10
 
     shadow {
         on
         softness 20
-        spread 2
+        spread 10
         offset x=0 y=4
         color "#00000080"
     }
@@ -229,7 +231,10 @@ layout {
     }
 
     // You can also customize the heights that "switch-preset-window-height" (Mod+Ctrl+Shift+R) toggles between.
-    // preset-window-heights { }
+     preset-window-heights { 
+                            proportion 0.5
+                            proportion 1.0 
+}
 
     // You can change the default width of the new windows.
      default-column-width {proportion 1.0;}
@@ -363,7 +368,7 @@ layout {
         softness 30
 
         // Spread expands the shadow.
-        spread 5
+        spread 500
 
         // Offset moves the shadow relative to the window.
         offset x=0 y=5
@@ -378,8 +383,8 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
+         //left 64
+         //right 64
         // top 64
         // bottom 64
     }
@@ -498,7 +503,7 @@ window-rule {
 
 
 
-//bindi
+
 
 binds {
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
@@ -563,6 +568,8 @@ binds {
     // but you need to manually put each argument in separate "" quotes.
     XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
     XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    
+    XF86Search allow-when-locked=true {spawn "fuzzel";}
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -572,12 +579,11 @@ binds {
     Mod+W repeat=false { close-window; }
 
     Mod+1  { focus-column-left; }
-   // Mod+Down  { focus-window-down; }
+    //Mod+z  { focus-window-down; }
     Mod+2 { focus-column-right; }
   //  Mod+H     { focus-column-left; }
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
-    Mod+L     { focus-column-right; }
  
    
 
