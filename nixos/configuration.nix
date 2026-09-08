@@ -283,6 +283,7 @@ services.displayManager.autoLogin = {
     intel-vaapi-driver
     #google-chrome
     firefox
+    gnome-browser-connector
     git
     playerctl
     wget
