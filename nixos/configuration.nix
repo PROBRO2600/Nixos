@@ -141,8 +141,8 @@ i18n.extraLocaleSettings = {
   services.desktopManager.plasma6.enable = false;
  
   # Enable the Gnome Desktop Enviourment.
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = false;
+  services.desktopManager.gnome.enable = false;
  
 
 
@@ -153,7 +153,7 @@ i18n.extraLocaleSettings = {
 
 #NIRI
 
-programs.niri.enable = false;
+programs.niri.enable = true;
 # Ensure Electron/Ozone apps default to Wayland natively
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -283,7 +283,6 @@ services.displayManager.autoLogin = {
     intel-vaapi-driver
     #google-chrome
     firefox
-    gnome-browser-connector
     git
     playerctl
     wget
