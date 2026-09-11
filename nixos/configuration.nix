@@ -318,7 +318,7 @@ services.displayManager.autoLogin = {
     protonmail-desktop
     kid3
     picard
-    python313Packages.pip
+    win2xcur
 
 
 
