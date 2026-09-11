@@ -310,7 +310,6 @@ services.displayManager.autoLogin = {
     mission-center
     mousepad
     appimage-run
-    spotify
     spotdl
     woeusb-ng
     cage
@@ -318,7 +317,6 @@ services.displayManager.autoLogin = {
     protonmail-desktop
     kid3
     picard
-    win2xcur
 
 
 
