@@ -317,7 +317,6 @@ services.displayManager.autoLogin = {
     protonmail-desktop
     kid3
     picard
-    usbimager
 
 
 
