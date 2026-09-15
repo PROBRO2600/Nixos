@@ -421,7 +421,7 @@ virtualisation.waydroid.enable = true;
 
 
 
-#PICKUP LINES
+#Alias
 
 
   # Add this to your configuration.nix
