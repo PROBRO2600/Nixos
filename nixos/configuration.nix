@@ -318,7 +318,7 @@ services.displayManager.autoLogin = {
     kid3
     picard
     parted
-
+    rpi-imager
 
 
 
