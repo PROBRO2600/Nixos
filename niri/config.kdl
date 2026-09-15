@@ -465,6 +465,13 @@ window-rule {
     default-column-width {} 
 }
 
+/*
+window-rule {
+    match app-id=""
+    open-fullscreen true
+    default-column-width {}
+}
+*/
 
 
 // Example: block out two password managers from screen capture.
